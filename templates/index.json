@@ -48,9 +48,35 @@
       "settings": {
         "text": "Esto es un texto por defecto"
       }
+    },
+    "carrusel_tabs_RbzKR3": {
+      "type": "carrusel-tabs",
+      "blocks": {
+        "carrusel_tabs_8tajXg": {
+          "type": "carrusel-tabs",
+          "settings": {
+            "tab_tittle": "popular products",
+            "tab_collection": "hydrogen"
+          }
+        },
+        "carrusel_tabs_9jKNQE": {
+          "type": "carrusel-tabs",
+          "settings": {
+            "tab_tittle": "special offers",
+            "tab_collection": "automated-collection"
+          }
+        }
+      },
+      "block_order": [
+        "carrusel_tabs_8tajXg",
+        "carrusel_tabs_9jKNQE"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
-    "slider-banner"
+    "slider-banner",
+    "carrusel_tabs_RbzKR3"
   ]
 }

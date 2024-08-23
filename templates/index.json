@@ -11,72 +11,23 @@
   "sections": {
     "slider-banner": {
       "type": "custom-slider",
-      "blocks": {
-        "slider_9mYqzF": {
-          "type": "slider",
-          "settings": {
-            "slider_text": "Deslízate con estilo: Equipa tu próxima aventura en la nieve.",
-            "slide_image": "shopify:\/\/shop_images\/theme_cover_image.jpg",
-            "link_text": "ver mas",
-            "link_url": "shopify:\/\/collections\/all"
-          }
-        },
-        "slider_bUEP3A": {
-          "type": "slider",
-          "settings": {
-            "slider_text": "Encuentra tu estilo: Moda fresca y moderna para ti",
-            "slide_image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg",
-            "link_text": "ver mas",
-            "link_url": "shopify:\/\/collections\/all"
-          }
-        },
-        "slider_8mjKWh": {
-          "type": "slider",
-          "settings": {
-            "slider_text": "Saborea la calma: Descubre nuestros dispositivos unicos y exclusivas",
-            "slide_image": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg",
-            "link_text": "ver mas",
-            "link_url": "shopify:\/\/collections\/all"
-          }
-        }
-      },
-      "block_order": [
-        "slider_9mYqzF",
-        "slider_bUEP3A",
-        "slider_8mjKWh"
-      ],
       "settings": {
-        "text": "Esto es un texto por defecto"
+      }
+    },
+    "countdown-timer": {
+      "type": "countdown-timer",
+      "settings": {
       }
     },
     "carrusel_tabs_RbzKR3": {
       "type": "carrusel-tabs",
-      "blocks": {
-        "carrusel_tabs_8tajXg": {
-          "type": "carrusel-tabs",
-          "settings": {
-            "tab_tittle": "popular products",
-            "tab_collection": "hydrogen"
-          }
-        },
-        "carrusel_tabs_9jKNQE": {
-          "type": "carrusel-tabs",
-          "settings": {
-            "tab_tittle": "special offers",
-            "tab_collection": "automated-collection"
-          }
-        }
-      },
-      "block_order": [
-        "carrusel_tabs_8tajXg",
-        "carrusel_tabs_9jKNQE"
-      ],
       "settings": {
       }
     }
   },
   "order": [
     "slider-banner",
+    "countdown-timer",
     "carrusel_tabs_RbzKR3"
   ]
 }

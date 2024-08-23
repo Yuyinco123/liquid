@@ -257,6 +257,7 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+    {{ 'swiper.min.css' | asset_url | stylesheet_tag }}
 
     {%- if settings.cart_type == 'drawer' -%}
       {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
@@ -296,6 +297,10 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+    <script src="{{ 'swiper.min.js' | asset_url }}"></script>
+    <script src="{{ 'tabs.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'countdown-timer.js' | asset_url }}" defer="defer"></script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">

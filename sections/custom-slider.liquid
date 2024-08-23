@@ -1,0 +1,93 @@
+{{ 'section.custom-slider.css' | asset_url | stylesheet_tag }}
+
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    {% for block in section.blocks %}
+      <div class="swiper-slide">
+        <div class="slide-content">
+          <h2>{{ block.settings.slider_text }}</h2>
+          <a href="{{ block.settings.link_url }}">{{ block.settings.link_text }}</a>
+        </div>
+        <img src="{{ block.settings.slide_image | image_url }}" alt="slider image">
+      </div>
+    {% endfor %}
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev">+</div>
+  <div class="swiper-button-next">-</div>
+</div>
+
+<script>
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Custom slider - Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Esto es el label",
+      "default": "Esto es un texto por defecto",
+      "info": "Info sobre este setting",
+      "placeholder": "Esto es el placeholder"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slider",
+      "name": "Slider",
+      "settings": [
+        {
+          "type": "text",
+          "id": "slider_text",
+          "label": "Titulo para el slider"
+        },
+        {
+          "type": "image_picker",
+          "id": "slide_image",
+          "label": "Selecciona tu imagen"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "link text",
+          "default": "ver mas"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Url"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

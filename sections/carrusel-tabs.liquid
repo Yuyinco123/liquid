@@ -1,0 +1,80 @@
+{{ 'carrusel-tabs.css' | asset_url | stylesheet_tag }}
+
+<tabs-continer>
+  <section class="tabs-title">
+    {% for block in section.blocks %}
+      {% if block.settings.tab_tittle != blank %}
+        <tab-title
+          class="tab-title"
+          index="{{ forloop.index }}"
+          {% if forloop.first %}
+            active
+          {% endif %}
+        >
+          {{ block.settings.tab_tittle }}
+        </tab-title>
+      {% endif %}
+    {% endfor %}
+  </section>
+
+  <section class="tabs-content">
+    {% for block in section.blocks %}
+      {% if block.settings.tab_collection != blank %}
+        <tab-content
+          class="tab-content"
+          index="{{ forloop.index }}"
+          {% if forloop.first %}
+            active
+          {% endif %}
+        >
+          <div class="gallery-container">
+            {% assign collection = block.settings.tab_collection %}
+            {% for product in collection.products %}
+              {% if product.featured_image != blank %}
+                <div class="gallery-item">
+                  <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}">
+                  <div class="product-info">
+                    <h3>{{ product.title }}</h3>
+                    <p class="price">{{ product.price | money }}</p>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </tab-content>
+      {% endif %}
+    {% endfor %}
+  </section>
+</tabs-continer>
+
+{% schema %}
+{
+  "name": "Carrusel Tabs",
+  "class": "carrusel-tabs-container",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "carrusel-tabs",
+      "name": "Carrusel Tabs",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_tittle",
+          "label": "Tab Tittle"
+        },
+        {
+          "type": "collection",
+          "id": "tab_collection",
+          "label": "Tab Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carrusel Tabs"
+    }
+  ]
+}
+{% endschema %}

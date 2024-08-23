@@ -1,0 +1,52 @@
+/* Asegúrate de que el contenedor principal del slider ocupe el 100% del ancho de la pantalla */
+.swiper {
+    width: 100%; /* Ancho completo */
+    max-width: 100%; /* Asegura que no se limite por algún contenedor padre */
+    height: 500px; /* Ajusta la altura según tus necesidades */
+    margin: 0 auto; /* Centrado del slider */
+}
+
+.slide-content{
+    position: absolute;
+}
+
+/* Asegúrate de que los elementos internos no limiten el ancho */
+.swiper-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    position:relative;
+}
+
+.swiper-slide {
+    width: 100%;
+    flex-shrink: 0; /* Asegura que las slides no se reduzcan */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Hace que las slides llenen la altura del slider */
+}
+
+/* Asegúrate de que las imágenes dentro de los sliders también ocupen todo el ancho */
+.swiper-slide img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.swiper .swiper-slide h2 {
+    color: #ffffff; /* Texto blanco */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+    padding: 10px; /* Espacio alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    
+}
+
+.swiper .swiper-slide a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 30px;
+    font-size: 24px;
+}

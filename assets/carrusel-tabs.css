@@ -1,0 +1,99 @@
+.tabs-content .tab-content{
+    display: none;
+}
+
+.tabs-content .tab-content[active]{
+    display: block;
+}
+
+.carrusel-tabs-container{
+    width: 100%;
+    padding: 2rem;
+}
+
+.carrusel-tabs-container tabs-continer{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tabs-title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.tabs-title tab-title{
+    padding: 10px;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+}
+
+.tabs-title tab-title[active]{
+   background-color: #000;
+   color: #fff;
+}
+
+.tabs-title tab-title:hover{
+    background-color: #000;
+    color: #fff;
+ }
+
+/* Contenedor principal de la galería */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px; /* Espacio entre las imágenes */
+    padding: 20px;
+    justify-items: center; /* Centra los elementos en sus celdas */
+}
+
+/* Estilo de cada imagen en la galería */
+.gallery-container img {
+    width: 100%; /* Ocupa todo el ancho de la celda */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor de la imagen */
+    transition: transform 0.3s ease; /* Efecto de transición para el zoom */
+}
+
+/* Efecto de zoom al pasar el ratón sobre la imagen */
+.gallery-container img:hover {
+    transform: scale(1.05); /* Aumenta un 5% el tamaño de la imagen */
+}
+
+/* Estilo de cada ítem en la galería */
+.gallery-item {
+    text-align: center; /* Centra el contenido del producto */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Información del producto: título y precio */
+.product-info {
+    margin-top: 10px;
+}
+
+.product-info h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.product-info .price {
+    font-size: 16px;
+    color: #ff6a00; /* Color del precio */
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Efecto al pasar el ratón */
+.gallery-item:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el ratón */
+}

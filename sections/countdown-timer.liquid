@@ -1,0 +1,15 @@
+{{ 'countdown-timer.css' | asset_url | stylesheet_tag }}
+
+<div id="countdown-container">
+  <div id="countdown" data-end-time="{{ section.settings.end_time | date: "%Y-%m-%dT%H:%M:%S%z" }}"></div>
+  <div class="product-info">
+    <img src="{{ section.settings.product_image | img_url: 'medium' }}" alt="Producto" class="product-image">
+    <p class="product-price">{{ section.settings.product_price | money }}</p>
+  </div>
+</div>
+
+{% schema %}
+{ "name": "Countdown Timer", "settings": [ { "type": "text", "id": "end_time", "label": "End Time", "default":
+"2024-12-31T23:59:59Z", "info": "The end time for the countdown in ISO 8601 format." }, { "type": "image_picker", "id":
+"product_image", "label": "Product Image" }, { "type": "text", "id": "product_price", "label": "Product Price",
+"default": "$99.99" } ], "presets": [ {

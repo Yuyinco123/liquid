@@ -11,16 +11,74 @@
   "sections": {
     "slider-banner": {
       "type": "custom-slider",
+      "blocks": {
+        "slider_WpTzKV": {
+          "type": "slider",
+          "settings": {
+            "slider_text": "Deslízate con estilo: Equipa tu próxima aventura en la nieve",
+            "slide_image": "shopify:\/\/shop_images\/theme_cover_image.jpg",
+            "link_text": "ver mas",
+            "link_url": "shopify:\/\/collections\/all"
+          }
+        },
+        "slider_Cttrfi": {
+          "type": "slider",
+          "settings": {
+            "slider_text": "Encuentra tu estilo: Moda fresca y moderna para ti.",
+            "slide_image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg",
+            "link_text": "ver mas",
+            "link_url": "shopify:\/\/collections\/all"
+          }
+        },
+        "slider_QmjVmL": {
+          "type": "slider",
+          "settings": {
+            "slider_text": "Saborea la calma: Descubre nuestras tazas únicas y exclusivas.",
+            "slide_image": "shopify:\/\/shop_images\/woman-holding-coffee-mug.jpg",
+            "link_text": "ver mas",
+            "link_url": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "slider_WpTzKV",
+        "slider_Cttrfi",
+        "slider_QmjVmL"
+      ],
       "settings": {
+        "text": "Esto es un texto por defecto"
       }
     },
     "countdown-timer": {
       "type": "countdown-timer",
       "settings": {
+        "end_time": "2024-12-31T23:59:59Z",
+        "product_image": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg",
+        "product_price": "$99.99"
       }
     },
     "carrusel_tabs_RbzKR3": {
       "type": "carrusel-tabs",
+      "blocks": {
+        "carrusel_tabs_axQGgc": {
+          "type": "carrusel-tabs",
+          "settings": {
+            "tab_tittle": "popular products",
+            "tab_collection": "hydrogen"
+          }
+        },
+        "carrusel_tabs_w6fR44": {
+          "type": "carrusel-tabs",
+          "settings": {
+            "tab_tittle": "special offers",
+            "tab_collection": "automated-collection"
+          }
+        }
+      },
+      "block_order": [
+        "carrusel_tabs_axQGgc",
+        "carrusel_tabs_w6fR44"
+      ],
       "settings": {
       }
     }

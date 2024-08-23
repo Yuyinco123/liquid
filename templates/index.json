@@ -11,7 +11,42 @@
   "sections": {
     "slider-banner": {
       "type": "custom-slider",
+      "blocks": {
+        "slider_9mYqzF": {
+          "type": "slider",
+          "settings": {
+            "slider_text": "Deslízate con estilo: Equipa tu próxima aventura en la nieve.",
+            "slide_image": "shopify:\/\/shop_images\/theme_cover_image.jpg",
+            "link_text": "ver mas",
+            "link_url": "shopify:\/\/collections\/all"
+          }
+        },
+        "slider_bUEP3A": {
+          "type": "slider",
+          "settings": {
+            "slider_text": "Encuentra tu estilo: Moda fresca y moderna para ti",
+            "slide_image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg",
+            "link_text": "ver mas",
+            "link_url": "shopify:\/\/collections\/all"
+          }
+        },
+        "slider_8mjKWh": {
+          "type": "slider",
+          "settings": {
+            "slider_text": "Saborea la calma: Descubre nuestros dispositivos unicos y exclusivas",
+            "slide_image": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg",
+            "link_text": "ver mas",
+            "link_url": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "slider_9mYqzF",
+        "slider_bUEP3A",
+        "slider_8mjKWh"
+      ],
       "settings": {
+        "text": "Esto es un texto por defecto"
       }
     }
   },
